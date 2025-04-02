@@ -12,7 +12,7 @@ type Props = {
   params: { id: string };
 };
 
-const productDetails = async ({ params: { id } }: Props) => {
+const ProductDetails = async ({ params: { id } }: Props) => {
   const product: Product = await getProductById(id);
 
   if (!product) redirect("/");
@@ -192,4 +192,5 @@ const productDetails = async ({ params: { id } }: Props) => {
     </div>
   );
 };
-export default productDetails;
+
+export default ProductDetails;
